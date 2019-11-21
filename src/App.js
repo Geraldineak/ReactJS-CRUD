@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import { Route } from 'react-router-dom';
+import { ImplicitCallback } from '@okta/okta-react';
 import {
     CssBaseline,
     withStyles,
@@ -9,12 +11,12 @@ import Home from './pages/Home';
 
 const styles = theme => ({
     main: {
-        padding: theme.spacing(3),
-        [theme.breakpoints.down('xs')]: {
-            padding: theme.spacing(2),
-        },
+      padding: theme.spacing(3),
+      [theme.breakpoints.down('xs')]: {
+        padding: theme.spacing(2),
+      },
     },
-});
+  });
 
 const App = ({ classes }) => (
     <Fragment>
@@ -22,6 +24,8 @@ const App = ({ classes }) => (
         <AppHeader/>
         <main className={classes.main}>
             <Home/>
+            <Route exact path="/" component={Home} />
+            <Route path="/implicit/callback" component={ImplicitCallback} />
         </main>
     </Fragment>
 );

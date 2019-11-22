@@ -17,12 +17,12 @@ const styles = {
 const AppHeader = ({ classes }) => (
     <AppBar position = "static" >
     <Toolbar >
-    <Typography variant = "h6"
-    color = "inherit" >
-    My React App 
-    </Typography>
-    <div className={classes.flex}/>
-    <LoginButton/>
+        <Typography variant = "h6"
+            color = "inherit" >
+            My React App 
+        </Typography>
+        <div className={classes.flex} />
+        <LoginButton />
     </Toolbar>
 </AppBar>
 );
